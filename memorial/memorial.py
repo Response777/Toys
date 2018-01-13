@@ -7,7 +7,7 @@ def parse(line):
 def load(fname):
     with open(fname) as f:
         lines = f.read().splitlines()
-    dates = [parse(l) for l in lines]
+    dates = [parse(l) for l in lines[1:]]
     return dates
 
 def daySince(dates):
